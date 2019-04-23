@@ -1,0 +1,25 @@
+name       : libkvkontakte
+version    : 5.0.0
+release    : 1
+source     :
+    - https://cdn.download.kde.org/stable/libkvkontakte/5.0.0/src/libkvkontakte-5.0.0.tar.xz : 00f11a13e1c3c10c7abd53b300237a9b7ab5c9b3b80e0381e01993e82c768193
+license    :
+    - LGPL-2.0-or-later
+    - LGPL-2.1-or-later
+component  : desktop.library
+summary    : C++ library for asynchronous interaction with VK social network via its web API
+description: |
+    C++ library for asynchronous interaction with VK social network via its web API
+builddeps  :
+    - pkgconfig(Qt5Core)
+    - pkgconfig(Qt5WebKit)
+    - extra-cmake-modules
+    - kdewebkit-devel
+    - ki18n-devel
+    - kio-devel
+setup      : |
+    %cmake_ninja -DBUILD_TESTING=OFF
+build      : |
+    %ninja_build
+install    : |
+    %ninja_install
