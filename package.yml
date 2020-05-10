@@ -1,6 +1,6 @@
 name       : libkvkontakte
 version    : 5.0.0
-release    : 1
+release    : 2
 source     :
     - https://cdn.download.kde.org/stable/libkvkontakte/5.0.0/src/libkvkontakte-5.0.0.tar.xz : 00f11a13e1c3c10c7abd53b300237a9b7ab5c9b3b80e0381e01993e82c768193
 license    :
@@ -17,6 +17,7 @@ builddeps  :
     - kdewebkit-devel
     - ki18n-devel
     - kio-devel
+    - kwindowsystem-devel
 setup      : |
     %cmake_ninja -DBUILD_TESTING=OFF
 build      : |
